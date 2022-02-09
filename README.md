@@ -1,1 +1,1 @@
-# graphql-mongoose-server
+# Graphql Mongoose Server
