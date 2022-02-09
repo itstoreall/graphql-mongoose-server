@@ -13,12 +13,8 @@ const server = new ApolloServer({
   context: { models },
 });
 
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
-server.listen({ port: process.env.PORT || 5000 }).then(({ url }) => {
+server.listen({ port: PORT }).then(({ url }) => {
   console.log(`server is running ★(◔.◔)★ ${url}`);
 });
-
-// server.listen(PORT).then(({ url }) => {
-//   console.log(`server is running ★(◔.◔)★ http://localhost:${url}/graphql`);
-// });
