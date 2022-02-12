@@ -6,7 +6,7 @@ import generateToken from '../helpers/generateToken.js';
 
 const register = async (
   _,
-  { registerInput: { username, email, password, confirmPassword } }
+  { registerInput: { username, email, password, confirmPassword, role } }
 ) => {
   const { User } = models;
   const { valid, errors } = validateRegisterInput(
@@ -46,6 +46,7 @@ const register = async (
     email,
     password,
     createdAt: new Date().toISOString(),
+    role: 'guest',
   });
 
   const res = await newUser.save();

@@ -1,3 +1,4 @@
 import view from './View.js';
+import user from './User.js';
 
-export default [view];
+export default [user, view];
